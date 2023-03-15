@@ -1,12 +1,12 @@
 var robo = document.querySelector('.robo');
 
 var robotronColors = [
-    'file:///C:/Users/2021327623.IFAL-MACEIO/poo/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron.png',
-    'file:///C:/Users/2021327623.IFAL-MACEIO/poo/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-vermelho.png',
-    'file:///C:/Users/2021327623.IFAL-MACEIO/poo/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-rosa.png',
-    'file:///C:/Users/2021327623.IFAL-MACEIO/poo/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-preto.png',
-    'file:///C:/Users/2021327623.IFAL-MACEIO/poo/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-branco.png',
-    'file:///C:/Users/2021327623.IFAL-MACEIO/poo/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-amarelo.png'
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-vermelho.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-rosa.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-preto.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-branco.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-amarelo.png'
 ];
 
 console.log(robo.src);
@@ -18,6 +18,7 @@ colorLeft = () => {
     } else {
         robo.src = robotronColors[5];
     }
+    console.log(robo.src)
 }
 
 colorRight = () => {
@@ -26,6 +27,7 @@ colorRight = () => {
     } else {
         robo.src = robotronColors[0];
     }
+    console.log(robo.src)
 }
 
 
