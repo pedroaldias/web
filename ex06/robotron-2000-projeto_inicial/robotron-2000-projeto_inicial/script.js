@@ -12,7 +12,7 @@ var robotronColors = [
 getIndex = () => robotronColors.indexOf(robo.src);
 
 colorLeft = () => {
-    if(getIndex() != 23456){
+    if(getIndex() != 0){
         robo.src = robotronColors[getIndex() - 1];
     } else {
         robo.src = robotronColors[5];
