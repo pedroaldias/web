@@ -1,1 +1,1 @@
-# robotron-2000
+<img src="https://img.icons8.com/color/1x/html-5.png" alt="HTML5"><img src="https://img.icons8.com/color/1x/css3.png" alt="CSS3"><img src="https://img.icons8.com/fluency/1x/javascript.png" alt="JS"><h2>Learning and practicing web development.</h2>
