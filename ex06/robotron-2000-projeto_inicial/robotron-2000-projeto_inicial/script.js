@@ -1,4 +1,4 @@
-var robo = document.querySelector('.robo')
+var robo = document.querySelector('.robo');
 
 var robotronColors = [
     'http://127.0.0.1:5500/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron.png',
