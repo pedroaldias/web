@@ -1,0 +1,82 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+input[type="button"]{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 2.5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    padding: 2.5px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.div-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.div-nome{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.div-peso{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+form{
+    width: fit-content;
+    height: fit-content;
+    border: 3px solid;
+    border-image: linear-gradient(45deg, rgb(119, 0, 255), rgb(29, 230, 39)) 1;
+}
+
+.div-altura{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.div-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.div-out{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#output{
+   width: fit-content;
+   height: fit-content;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size: 16px;
+}
+
+::-webkit-input-placeholder  { 
+    font-size: 9.6px;
+}
