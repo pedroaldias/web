@@ -1,14 +1,15 @@
 var robo = document.querySelector('.robo');
 
 var robotronColors = [
-    'http://127.0.0.1:5500/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron.png',
-    'http://127.0.0.1:5500/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-vermelho.png',
-    'http://127.0.0.1:5500/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-rosa.png',
-    'http://127.0.0.1:5500/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-preto.png',
-    'http://127.0.0.1:5500/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-branco.png',
-    'http://127.0.0.1:5500/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-amarelo.png'
+    'file:///C:/Users/2021327623.IFAL-MACEIO/poo/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/poo/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-vermelho.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/poo/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-rosa.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/poo/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-preto.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/poo/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-branco.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/poo/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-amarelo.png'
 ];
 
+console.log(robo.src);
 getIndex = () => robotronColors.indexOf(robo.src);
 
 colorLeft = () => {

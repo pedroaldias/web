@@ -98,8 +98,8 @@ main {
     text-transform: uppercase;
     font-size: 2.5em;
     position: absolute;
-    right: 51rem;
-    top: 51rem;
+    right: 46rem;
+    top: 53rem;
 }
 
 .controle {
@@ -121,8 +121,8 @@ main {
     align-items: center;
     align-self: flex-end;
     position: absolute;
-    right: 50rem;   
-    top: 48rem;
+    right: 45rem;   
+    top: 50rem;
 }
 
 .controle-contador {
