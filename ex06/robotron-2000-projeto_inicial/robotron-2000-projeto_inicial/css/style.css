@@ -98,7 +98,7 @@ main {
     text-transform: uppercase;
     font-size: 2.5em;
     position: absolute;
-    right: 51rem;
+    right: 50rem;
     top: 49rem;
 }
 
@@ -121,8 +121,9 @@ main {
     align-items: center;
     align-self: flex-end;
     position: absolute;
-    right: 50rem;   
+    right: 49rem;   
     top: 46rem;
+    clip-path: polygon(calc(100% - 23px) 0, 100% 23px, 100% calc(100% - 23px), calc(100% - 23px) 100%, 23px 100%, 0 calc(100% - 23px), 0 23px, 23px 0);
 }
 
 .controle-contador {
@@ -180,7 +181,7 @@ main {
     background: var(--main-branco);
     clip-path: polygon(100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 0);
     cursor: pointer;
-    position:relative;
+    position: relative;
     bottom: 3rem;
 }
 
@@ -192,10 +193,8 @@ main {
 .controle-itens-cor:hover {
     background: var(--main-branco);
     color: var(--main-preto);
-    border-radius: 5px;
-
+    border-radius: 2.5px;
 }
-
 
 /****************************** Estatísticas *****/
 .estatisticas {
