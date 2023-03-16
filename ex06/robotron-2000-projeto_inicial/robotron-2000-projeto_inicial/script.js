@@ -1,6 +1,6 @@
-var robo = document.querySelector('.robo');
+let robo = document.querySelector('.robo');
 
-var robotronColors = [
+const robotronColors = [
     'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron.png',
     'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-vermelho.png',
     'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-rosa.png',
@@ -28,4 +28,4 @@ colorRight = () => {
 }
 
 
-
+let controleContador = document.querySelector('.controle-contador')

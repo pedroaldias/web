@@ -98,8 +98,8 @@ main {
     text-transform: uppercase;
     font-size: 2.5em;
     position: absolute; 
-    right: 56rem;
-    top: 50rem;
+    right: 62rem;
+    top: 52rem;
 }
 
 .controle {
@@ -121,8 +121,8 @@ main {
     align-items: center;
     align-self: flex-end;
     position: absolute;
-    right: 42.6rem;     
-    top: 50rem;
+    right: 48.5rem;     
+    top: 52rem;
     clip-path: polygon(calc(100% - 23px) 0, 100% 23px, 100% calc(100% - 23px), calc(100% - 23px) 100%, 23px 100%, 0 calc(100% - 23px), 0 23px, 23px 0);
 }
 
