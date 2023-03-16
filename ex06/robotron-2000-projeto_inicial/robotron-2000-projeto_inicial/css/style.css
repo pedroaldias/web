@@ -94,7 +94,7 @@ main {
 }   
 
 .peca-titulo-cor {
-    color: var(--main-bra);
+    color: var(--main-branco);
     text-transform: uppercase;
     font-size: 2.5em;
     position: absolute; 
