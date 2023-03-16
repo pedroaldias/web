@@ -9,7 +9,6 @@ var robotronColors = [
     'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/robotron-2000-projeto_inicial/robotron-2000-projeto_inicial/img/robotron-amarelo.png'
 ];
 
-console.log(robo.src);
 getIndex = () => robotronColors.indexOf(robo.src);
 
 colorLeft = () => {
@@ -18,7 +17,6 @@ colorLeft = () => {
     } else {
         robo.src = robotronColors[5];
     }
-    console.log(robo.src)
 }
 
 colorRight = () => {
@@ -27,7 +25,6 @@ colorRight = () => {
     } else {
         robo.src = robotronColors[0];
     }
-    console.log(robo.src)
 }
 
 
