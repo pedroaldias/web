@@ -31,7 +31,7 @@ colorRight = () => {
 
 increaseValue = (valueCounter) =>{
     if(valueCounter.value < 1000){
-        valueCounter.value += 10;
+        valueCounter.value += 10
     }
 }
 
