@@ -126,12 +126,59 @@ main {
     clip-path: polygon(calc(100% - 23px) 0, 100% 23px, 100% calc(100% - 23px), calc(100% - 23px) 100%, 23px 100%, 0 calc(100% - 23px), 0 23px, 23px 0);
 }
 
-.controle-contador {
-    width: 40px;
+.controle-contador-0 {
+    width: 80px;
     height: 35px;
     background: none;
     border: 0;
-    margin: 0 1rem;
+    color: var(--main-branco);
+    text-align: center;
+    font-size: 2.5em;
+    display: inline-flex;
+    align-items: center;
+    padding-top: 8px;
+}
+.controle-contador-1 {
+    width: 80px;
+    height: 35px;
+    background: none;
+    border: 0;
+    color: var(--main-branco);
+    text-align: center;
+    font-size: 2.5em;
+    display: inline-flex;
+    align-items: center;
+    padding-top: 8px;
+}
+.controle-contador-2 {
+    width: 80px;
+    height: 35px;
+    background: none;
+    border: 0;
+    color: var(--main-branco);
+    text-align: center;
+    font-size: 2.5em;
+    display: inline-flex;
+    align-items: center;
+    padding-top: 8px;
+}
+.controle-contador-3 {
+    width: 80px;
+    height: 35px;
+    background: none;
+    border: 0;
+    color: var(--main-branco);
+    text-align: center;
+    font-size: 2.5em;
+    display: inline-flex;
+    align-items: center;
+    padding-top: 8px;
+}
+.controle-contador-4 {
+    width: 80px;
+    height: 35px;
+    background: none;
+    border: 0;  
     color: var(--main-branco);
     text-align: center;
     font-size: 2.5em;
@@ -140,7 +187,21 @@ main {
     padding-top: 8px;
 }
 
-.controle-ajuste {
+.controle-ajuste-aumentar{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 44px;
+    border-radius: 50%;
+    color: var(--main-cinza);
+    font-size: 4em;
+    background: var(--main-preto);
+    text-align: center;
+    border: 3px solid var(--main-cinza);
+    cursor: pointer;
+}
+
+.controle-ajuste-diminuir{
     display: inline-block;
     width: 40px;
     height: 40px;
