@@ -1,12 +1,12 @@
 let robo = document.querySelector('.robo');
 
 var robotronColors = [
-    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/img/robotron.png',
-    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/img/robotron-vermelho.png',
-    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/img/robotron-rosa.png',
-    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/img/robotron-branco.png',
-    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/img/robotron-preto.png',
-    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/img/robotron-amarelo.png'
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06-07/img/robotron.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06-07/img/robotron-vermelho.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06-07/img/robotron-rosa.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06-07/img/robotron-branco.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06-07/img/robotron-preto.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06-07/img/robotron-amarelo.png'
 ];
 
 getIndex = () => robotronColors.indexOf(robo.src);
@@ -43,7 +43,9 @@ decreaseValue = (valueCounter) =>{
 }
 
 const increaseValueButtonArray = document.getElementsByClassName('controle-ajuste-aumentar')
+
 const decreaseValueButtonArray = document.getElementsByClassName('controle-ajuste-diminuir')
+
 const valueCounter = [
     document.querySelector('.controle-contador-0'),
     document.querySelector('.controle-contador-1'),
@@ -51,6 +53,7 @@ const valueCounter = [
     document.querySelector('.controle-contador-3'),
     document.querySelector('.controle-contador-4')
 ] 
+
 const increaseArray = [
     increaseValueButtonArray[0].addEventListener('click', function(){
         increaseValue(valueCounter[0])
@@ -68,6 +71,7 @@ const increaseArray = [
         increaseValue(valueCounter[4])
     }),
 ]
+
 const decreaseArray = [
     decreaseValueButtonArray[0].addEventListener('click', function(){
         decreaseValue(valueCounter[0])
