@@ -138,6 +138,7 @@ main {
     align-items: center;
     padding-top: 8px;
 }
+
 .controle-contador-1 {
     width: 80px;
     height: 35px;
@@ -185,6 +186,12 @@ main {
     display: inline-flex;
     align-items: center;
     padding-top: 8px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .controle-ajuste-aumentar{

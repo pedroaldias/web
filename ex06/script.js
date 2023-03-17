@@ -30,9 +30,9 @@ colorRight = () => {
 }    
 
 increaseValue = (valueCounter) =>{
-    if(valueCounter.value < 1000){
-        valueCounter.value += 10
-    }
+    if(valueCounter.value < 100){
+        valueCounter.value = parseInt(valueCounter.value) + 10
+    } 
 }
 
 decreaseValue = (valueCounter) =>{
@@ -52,7 +52,7 @@ const valueCounter = [
 ] 
 const increaseArray = [
     increaseValueButtonArray[0].addEventListener('click', function(){
-        increaseValue(parseInt(valueCounter[0]))
+        increaseValue(valueCounter[0])
     }),
     increaseValueButtonArray[1].addEventListener('click', function(){
         increaseValue(valueCounter[1])
@@ -83,5 +83,4 @@ const decreaseArray = [
     decreaseValueButtonArray[4].addEventListener('click', function(){
         decreaseValue(valueCounter[4])
     }),
-
 ]
