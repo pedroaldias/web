@@ -1,17 +1,15 @@
 let robo = document.querySelector('.robo');
 
-const robotronColors = [
-    'img/robotron.png',
-    'img/robotron-vermelho.png',
-    'img/robotron-rosa.png',
-    'img/robotron-preto.png',
-    'img/robotron-branco.png',
-    'img/robotron-amarelo.png'
+var robotronColors = [
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/img/robotron.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/img/robotron-vermelho.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/img/robotron-rosa.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/img/robotron-branco.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/img/robotron-preto.png',
+    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06/img/robotron-amarelo.png'
 ];
 
-
 getIndex = () => robotronColors.indexOf(robo.src);
-
 
 colorLeft = () => {
     if(getIndex() != 0){
@@ -38,6 +36,9 @@ increaseValue = (valueCounter) =>{
 decreaseValue = (valueCounter) =>{
     if(valueCounter.value > 0){
         valueCounter.value -= 10;
+        if(valueCounter.value == 0){
+            valueCounter.value = '00'
+        }
     }
 }
 
