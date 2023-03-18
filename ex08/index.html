@@ -9,17 +9,111 @@
 </head>
 <body>
     <header>
-        <div class="title"><h1>Escola Virtual</h1></div>
-        <div class="subtitle"><h2>Formulário de Pré-Matrícula</h2></div>
+        <table>
+          <tr>
+            <th>
+                <td>
+                    <div class="title"><h1>Escola Virtual</h1></div>
+                </td>
+            </th>
+          </tr>
+          <tr>
+            <th>
+                <td>
+                    <div class="subtitle"><h2>Formulário de Pré-Matrícula</h2></div>
+                </td>
+            </th>
+          </tr>
+        </table>
     </header>
-    <section>
-        <form>
-            <br>
-            <br>
-            <br>
-            <h3 class="form-title">Dados Pessoais:</h3>
-        </form>
-    </section>
+    <form>
+        <section>
+                <table>
+                    <tr>
+                        <th>
+                            <div"><h3>Dados Pessoais:</h3></div>
+                        </th>
+                    </tr>
+                    <tr>    
+                        <td>
+                            <div class="data" id="student-name">Nome do aluno: <input type="text"></div>
+                            <div class="data" id="birth">Data de nascimento: <input type="date"></div>
+                            <div class="data" id="mother-name">Nome da mãe: <input type="text"></div>
+                            <div class="data" id="father-name">Nome do pai: <input type="text"></div>
+                            <div class="data" id="phone-number">Telefone: <input type="tel"></div>
+                        </td>
+                    </tr>
+                </table>
+        </section>
+        <section>
+            <table>
+                <tr>
+                    <th>
+                        <div><h3>Informações de Matrícula:</h3></div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="data">
+                            <div class="serie-title" id="serie">Série:</div>
+                            <select name="serie" id="serie">
+                                <option value="kindergarten">Ensino Infantil</option>
+                                <option value="elementary">Ensino Fundamental</option>
+                                <option value="high">Ensino Médio</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="data">
+                            <div class="shift-title">Turno:</div>
+                            <div class="radio-container">
+                                <input type="radio" id="manha" value="manha">
+                                <label for="manha">Manhã</label>
+                                <input type="radio" id="tarde" value="tarde">
+                                <label for="tarde">Tarde</label>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="data">
+                            <div class="activites-title">Atividades Extracurriculares:</div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="computing">
+                                <label for="computing">Informática</label>
+                                <br>
+                                <input type="checkbox" id="musics">
+                                <label for="musics">Música</label>
+                                <br>
+                                <input type="checkbox" id="ballet">
+                                <label for="ballet">Ballet</label>
+                                <br>
+                                <input type="checkbox" id="painting">
+                                <label for="painting">Pintura</label>
+                                <br>
+                                <input type="checkbox" id="judo">
+                                <label for="judo">Judô</label>
+                                <br>
+                                <input type="checkbox" id="soccer">
+                                <label for="soccer">Futebol</label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <footer>
+            <table>
+                <tr>
+                    <td>
+                        <div class="final-buttons">
+                            <button type="submit">Enviar formulário</button>
+                            <button type="reset">Limpar formulário</button>
+                        </div> 
+                    </td>
+                </tr>
+            </table>     
+        </footer>
+    </form>
     <script src="script.js"></script>
 </body>
 </html>
