@@ -221,7 +221,6 @@ const turnoManha = document.getElementById('manha');
 const turnoTarde = document.getElementById('tarde')
 
 const qtdAtividades = document.querySelectorAll('.checkbox-items');
-console.log(qtdAtividades)
 
 const erroNomeAluno = document.getElementById('erro-nome-aluno')
 const erroNomeMae = document.getElementById('erro-nome-mae')
