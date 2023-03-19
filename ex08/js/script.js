@@ -10,7 +10,7 @@ validarNomeAluno = () => {
         erroNomeAluno.innerHTML = ''
         return true
     } else if(!validarCampoVazio(nomeAluno.value)){
-        erroNomeAluno.innerHTML = "* Campo obrigatório";
+        erroNomeAluno.innerHTML = '* Campo obrigatório';
         return false
     }
 }
@@ -20,7 +20,7 @@ validarNomeMae = () => {
         erroNomeMae.innerHTML = ''
         return true
     } else if(!validarCampoVazio(nomeMae.value)){
-        erroNomeMae.innerHTML = "* Campo obrigatório";
+        erroNomeMae.innerHTML = '* Campo obrigatório';
         return false
     }
 }
@@ -30,27 +30,29 @@ validarNomePai = () => {
         erroNomePai.innerHTML = ''
         return true
     } else if(!validarCampoVazio(nomePai.value)){
-        erroNomePai.innerHTML = "* Campo obrigatório";
+        erroNomePai.innerHTML = '* Campo obrigatório';
         return false
     }
 }
 
 validarData = () => {
-    if(validarCampoVazio(dataNascimento.value)){
-        erroDataNascimento.innerHTML = "";
-        return true
-    } else if(!validarCampoVazio(dataNascimento.value)){
-        erroDataNascimento.innerHTML = "* Campo obrigatório";
+    const dataHoje = Date.now();
+    var dataEscolhida = Date.parse(dataNascimento.value);
+    if (dataEscolhida <= dataHoje && dataEscolhida != ''){
+        erroDataNascimento.innerHTML = ''
+        return true;
+    } else {
+        erroDataNascimento.innerHTML = '* Data inválida';
         return false
     }
 }
 
 validarTelefone = () => {
     if(telefone.value.length != 11){
-        erroTelefone.innerHTML = "* Número de telefone inválido";
+        erroTelefone.innerHTML = '* Número de telefone inválido';
         return false
     } else if(telefone.value.length == 11){
-        erroTelefone.innerHTML = "";
+        erroTelefone.innerHTML = '';
         return true;
     }
     var telefoneArray = telefone.value.split('');
@@ -97,7 +99,7 @@ validarEmail = () => {
         erroEmail.innerHTML = ''
         return true;
     } else if(!emailRegex.test(email.value)){
-        erroEmail.innerHTML = "* Email inválido";
+        erroEmail.innerHTML = '* Email inválido';
         return false;
     }
 }
@@ -112,10 +114,10 @@ validarEscolaridade = () => {
 
 validarTurno = () => {
     if(turnoManha.checked || turnoTarde.checked){
-        erroTurno.innerHTML = "";
+        erroTurno.innerHTML = '';
         return true;
     } else {
-        erroTurno.innerHTML = "* Campo obrigatório";
+        erroTurno.innerHTML = '* Campo obrigatório';
         return false;
     } 
 }
@@ -244,7 +246,4 @@ const erroCheckbox = document.getElementById('erro-checkbox')
 const erroTurno = document.getElementById('erro-turno')
 
 const formulario = document.getElementById('formulario')
-
-
-
 
