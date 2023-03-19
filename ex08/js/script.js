@@ -152,7 +152,6 @@ alertaSucesso = () => {
       })
 }
 
-formularioSubmit = () => {formulario.submit()}
 
 validar = () => {
     var resultado = true;
@@ -210,8 +209,8 @@ validar = () => {
         return false
     }
     if(resultado){
-        formularioSubmit()
         alertaSucesso()
+        formulario.reset()
     }
 }   
 
