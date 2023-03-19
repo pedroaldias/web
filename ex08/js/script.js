@@ -152,6 +152,8 @@ alertaSucesso = () => {
       })
 }
 
+formularioSubmit = () => {formulario.submit()}
+
 validar = () => {
     var resultado = true;
     if(!validarNomeAluno()){
@@ -208,9 +210,10 @@ validar = () => {
         return false
     }
     if(resultado){
+        formularioSubmit()
         alertaSucesso()
     }
-}
+}   
 
 
 
@@ -240,6 +243,9 @@ const erroTelefone = document.getElementById('erro-telefone')
 const erroEmail = document.getElementById('erro-email')
 const erroCheckbox = document.getElementById('erro-checkbox')
 const erroTurno = document.getElementById('erro-turno')
+
+const formulario = document.getElementById('formulario')
+
 
 
 
