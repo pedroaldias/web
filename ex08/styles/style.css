@@ -152,17 +152,6 @@ select:focus {
     table td,
     table th {
         display: block;
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    table,
-    table tbody,
-    table tr,
-    table td,
-    table th {
-        display: block;
-        width: 100%;
+        width: 80%;
     }
 }

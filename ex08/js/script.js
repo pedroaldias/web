@@ -53,13 +53,6 @@ validarTelefone = () => {
         erroTelefone.innerHTML = "";
         return true;
     }
-    if(validarCampoVazio(telefone.value)){
-        erroTelefone.innerHTML = ''
-        return true
-    } else if(!validarCampoVazio(telefone.value)){
-        erroTelefone.innerHTML = "* Campo obrigatório";
-        return false
-    }
     var telefoneArray = telefone.value.split('');
     var ddd = telefoneArray[0] + telefoneArray[1];
     var dddsValidos = [
@@ -109,7 +102,6 @@ validarEmail = () => {
     }
 }
 
-
 validarEscolaridade = () => {
     if(escolaridade.value != null){
         return true
@@ -144,83 +136,101 @@ validarAtividades = () => {
     }
 }
 
+alertaErro = () => {
+    Swal.fire({
+        icon: 'error',
+        title: 'Não foi possível enviar o formulário'
+    })
+}
+
+alertaSucesso = () => {
+    Swal.fire({
+        icon: 'success',
+        title: 'Formulário enviado com sucesso',
+        showConfirmButton: false,
+        timer: 1500
+      })
+}
+
 validar = () => {
     var resultado = true;
     if(!validarNomeAluno()){
-        alert('Não foi possível enviar o formulário.')
-        resultado = false;
+        alertaErro()
+        resultado = false
         return false
     }
 
     if(!validarNomeMae()){
-        alert('Não foi possível enviar o formulário.')
-        resultado = false;
+        alertaErro()
+        resultado = false
         return false
     }
 
     if(!validarNomePai()){
-        alert('Não foi possível enviar o formulário.')
-        resultado = false;
+        alertaErro()
+        resultado = false
         return false
     }
 
     if(!validarData()){
-
-        alert('Não foi possível enviar o formulário.')
-        resultado = false;
-        return false;
+        alertaErro()
+        resultado = false
+        return false
     }
 
     if(!validarTelefone()){
-        alert('Não foi possível enviar o formulário.')
-        resultado = false;
+        alertaErro()
+        resultado = false
         return false
     }
 
     if(!validarEmail()){
-        alert('Não foi possível enviar o formulário.')
-        resultado = false;
+        alertaErro()
+        resultado = false
         return false
     }
 
     if(!validarEscolaridade()){
-        alert('Não foi possível enviar o formulário.')
-        resultado = false;
+        alertaErro()
+        resultado = false
         return false
     }
 
     if(!validarTurno()){
-        alert('Não foi possível enviar o formulário.')
-        resultado = false;
+        alertaErro()
+        resultado = false
         return false
     } 
 
     if(!validarAtividades()){
-        alert('Não foi possível enviar o formulário.')
-        resultado = false;
+        alertaErro()
+        resultado = false
         return false
     }
     if(resultado){
-        alert('Formulário enviado com sucesso!')
+        alertaSucesso()
     }
 }
 
-const nomeAluno = document.getElementById('nome-aluno');
-const nomeMae = document.getElementById('nome-mae');
-const nomePai = document.getElementById('nome-pai');
 
-const telefone = document.getElementById('telefone');
 
-const dataNascimento = document.getElementById('data-nascimento');
+const nomeAluno = document.getElementById('nome-aluno')
+const nomeMae = document.getElementById('nome-mae')
+const nomePai = document.getElementById('nome-pai')
+
+const telefone = document.getElementById('telefone')
+
+const dataNascimento = document.getElementById('data-nascimento')
 
 const email = document.getElementById('email');
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$/;
-const escolaridade = document.getElementById('serie');
 
-const turnoManha = document.getElementById('manha');
+const escolaridade = document.getElementById('serie')
+
+const turnoManha = document.getElementById('manha')
 const turnoTarde = document.getElementById('tarde')
 
-const qtdAtividades = document.querySelectorAll('.checkbox-items');
+const qtdAtividades = document.querySelectorAll('.checkbox-items')
 
 const erroNomeAluno = document.getElementById('erro-nome-aluno')
 const erroNomeMae = document.getElementById('erro-nome-mae')
@@ -230,3 +240,6 @@ const erroTelefone = document.getElementById('erro-telefone')
 const erroEmail = document.getElementById('erro-email')
 const erroCheckbox = document.getElementById('erro-checkbox')
 const erroTurno = document.getElementById('erro-turno')
+
+
+
