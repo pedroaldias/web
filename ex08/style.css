@@ -9,9 +9,9 @@ table {
     border-radius: 8px;
     overflow: hidden;
     width: 60%;
-    max-width: 60%;
+    max-width: 100%;
     color: #333;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.4;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -29,7 +29,7 @@ th {
     text-align: left;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 377px) {
 table {
     display: table;
     overflow-x: auto;
@@ -61,21 +61,26 @@ select {
     cursor: pointer;
 }
 
-.title{
+.titulo{
     text-align: center;
 }
-.subtitle{
+.subtitulo{
     text-align: center;
 }
 
-
-.data {
+.dados {
     margin-bottom: 2rem;
-} 
+}
 
-.data input[type="text"],
-.data input[type="date"],
-.data input[type="tel"] {
+.erro{
+    margin-bottom:2rem;
+    color:#d32b01;
+    margin-top: 2rem;;
+}
+
+.dados input[type="text"],
+.dados input[type="date"],
+.dados input[type="tel"] {
     width: 98%;
     padding: 0.5rem;
     border-radius: 4px;
@@ -83,10 +88,10 @@ select {
 }
 
 .final-buttons{
-    text-align:center;
+    text-align: center;
 }
 
-.final-buttons button {
+.submit-button button {
     display: inline-block;
     background-color: #353535; 
     color: white;
@@ -100,12 +105,34 @@ select {
     margin: 10px;
 }
 
-.final-buttons button:hover {
-    background-color: #4d7cfc; 
+.submit-button button:hover {
+    background-color: #239406; 
 }
 
-.final-buttons button:active {
-    background-color: #3362fc; 
+.submit-button button:active {
+    background-color: #0f9203; 
+}
+
+.reset-button button {
+    display: inline-block;
+    background-color: #353535; 
+    color: white;
+    border: none; 
+    padding: 12px 24px;
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.reset-button button:hover {
+    background-color: #d32b01; 
+}
+
+.reset-button button:active {
+    background-color: #ff0000; 
 }
 
 select:focus {
@@ -117,7 +144,25 @@ select:focus {
     text-align: left;
 }
 
-#shift{
-    text-align: center;
+
+@media only screen and (max-width: 768px) {
+    table,
+    table tbody,
+    table tr,
+    table td,
+    table th {
+        display: block;
+        width: 100%;
+    }
 }
-  
+
+@media only screen and (max-width: 768px) {
+    table,
+    table tbody,
+    table tr,
+    table td,
+    table th {
+        display: block;
+        width: 100%;
+    }
+}
