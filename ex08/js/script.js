@@ -155,7 +155,7 @@ alertaSucesso = () => {
 }
 
 
-validar = () => {
+validarFormulario = () => {
     var resultado = true;
     if(!validarNomeAluno()){
         alertaErro()
@@ -210,7 +210,7 @@ validar = () => {
         resultado = false
         return false
     }
-    if(resultado){
+    if(resultado){  
         alertaSucesso()
         formulario.reset()
     }
