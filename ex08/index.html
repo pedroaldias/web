@@ -34,7 +34,7 @@
                     </tr>
                     <tr>    
                         <td>
-                            <div class='dados'>Nome do aluno: <input type='text' id='nome-aluno' onblur='validarNomeAluno()'></div>
+                            <div class='dados'>Nome do aluno: <input type='text' id='nome-aluno'  onblur='validarNomeAluno()'></div>
                             <div class='erro' id='erro-nome-aluno'></div>
                             <div class='dados'>Data de nascimento: <input type='date' id='data-nascimento' onblur='validarData()'></div>
                             <div class='erro' id='erro-data-nascimento'></div>
@@ -62,11 +62,11 @@
                     <td>
                         <div class='dados'>
                             <div>Série:</div>
-                            <select id='serie' onchange='validarEscolaridade()'>
-                                <option value='infantil' id='infantil'>Ensino Infantil</option>
-                                <option value='fundamental' id='fundamental'>Ensino Fundamental</option>
-                                <option value='medio' id='medio'>Ensino Médio</option>
-                            </select>
+                                <select id='serie' onchange='validarEscolaridade()'>
+                                    <option value='infantil' id='infantil'>Ensino Infantil</option>
+                                    <option value='fundamental' id='fundamental'>Ensino Fundamental</option>
+                                    <option value='medio' id='medio'>Ensino Médio</option> 
+                            </div>
                         </div>
                     </td>
                     <td>
@@ -114,16 +114,10 @@
             </table>
         </section>
         <footer>
-            <table>
-                <tr>
-                    <td>
-                        <div class='final-buttons'>
-                            <label class='submit-button'><button type='submit' onclick='validarFormulario()'>Enviar formulário</button></label>
-                            <label class='reset-button'><button type='reset'>Limpar formulário</button></label>
-                        </div> 
-                    </td>
-                </tr>
-            </table>     
+            <div class='final-buttons'>
+                <label class='submit-button'><button type='submit' onclick='validarFormulario()'>Enviar formulário</button></label>
+                <label class='reset-button'><button type='reset'>Limpar formulário</button></label>
+            </div> 
         </footer>
     </form>
     <script src='js/script.js'></script>

@@ -1,27 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
 
-body{
+body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-img{
-    width: 75px;
+img {
+    width: 55px;
 }
 
 table {
-    border: 1.5px solid #ccc;
+    border: 1.5px solid #999999;
+    border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
     border-radius: 8px;
     overflow: hidden;
-    width: 60%;
-    max-width: 100%;
+    width: 35%;
+    max-width: 100%;    
     color: #333;
-    font-size: 13px;
+    font-size: 12px;
     line-height: auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-  
+
 th,
 td {
     padding: 1rem;
@@ -35,28 +36,8 @@ th {
     text-align: left;
 }
 
-@media screen and (max-width: 377px) {
-table {
-    display: table;
-    overflow-x: auto;
-    border-collapse: collapse;
-    white-space: nowrap;
-}
-
-tr {
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 0.5em;
-}
-
-td {
-    display: block;
-    text-align: right;
-    padding: 0.5rem;
-}
-
-}
-
 select {
+    font-size: 11px;
     background-color: transparent;
     border: none;
     border-radius: 5px;
@@ -67,45 +48,62 @@ select {
     cursor: pointer;
 }
 
-.titulo{
+footer {
+    padding: 10px;
+}
+
+.checkbox-container {
+    font-size: 11px;
+    transform: scale(0.96);
+}
+
+.radio-container {
+    font-size: 11px;
+    transform: scale(0.96);
+}
+
+.titulo {
     text-align: center;
 }
 
-.subtitulo{
+.subtitulo {
     text-align: center;
 }
 
-.icone-escola{
+.icone-escola {
     display: flex;
     justify-content: center;
 }
 
 .dados {
+    font-size: 12px;
     margin-bottom: 2rem;
 }
 
-.erro{
+.erro {
     margin-bottom:2rem;
     color:#d32b01;
-    margin-top: 2rem;;
+    margin-top: 2rem;
 }
 
-.dados input[type="text"],
-.dados input[type="date"],
-.dados input[type="tel"] {
+.dados input[type='text'],
+.dados input[type='date'],
+.dados input[type='tel'] {
     width: 98%;
     padding: 0.5rem;
     border-radius: 4px;
     border: 1px solid #ccc;
+    font-size: 11px;
 }
 
-.final-buttons{
-    text-align: center;
+.final-buttons {
+    display:flex;
+    justify-content: center;
 }
 
 .submit-button button {
-    display: inline-block;
-    background-color: #353535; 
+    font-size: 11px;
+    background-color: #333;
     color: white;
     border: none; 
     padding: 12px 24px;
@@ -126,8 +124,8 @@ select {
 }
 
 .reset-button button {
-    display: inline-block;
-    background-color: #353535; 
+    font-size: 11px;
+    background-color: #333;
     color: white;
     border: none; 
     padding: 12px 24px;
@@ -152,10 +150,13 @@ select:focus {
     box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.3);
 }
 
+::-webkit-input-placeholder {
+    font-size: 11px;
+}
+
 #serie{
     text-align: left;
 }
-
 
 @media only screen and (max-width: 768px) {
     table,
@@ -165,5 +166,25 @@ select:focus {
     table th {
         display: block;
         width: 80%;
+    }
+}
+
+@media screen and (max-width: 377px) {
+    table {
+        display: table;
+        overflow-x: auto;
+        border-collapse: collapse;
+        white-space: nowrap;
+    }
+
+    tr {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 0.5em;
+    }
+    
+    td {
+        display: block;
+        text-align: right;
+        padding: 0.5rem;
     }
 }
