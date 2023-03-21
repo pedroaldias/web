@@ -47,6 +47,13 @@ validarData = () => {
     }
 }
 
+mudarPadraoTelefone = () => {
+    telefone.value = telefone.value.replace(/\D/g,"")                
+    telefone.value = telefone.value.replace(/^(\d\d)(\d)/g,"($1) $2")
+    telefone.value = telefone.value.replace(/(\d{5})(\d)/,"$1-$2")
+    return telefone.value
+}
+
 validarTelefone = () => {
     if(telefone.value.length != 15){
         erroTelefone.innerHTML = '* Número de telefone inválido';
@@ -154,13 +161,6 @@ alertaSucesso = () => {
       })
 }
 
-test = () => {
-    telefone.value = telefone.value.replace(/\D/g,"")                 //Remove tudo o que não é dígito
-    telefone.value = telefone.value.replace(/^(\d\d)(\d)/g,"($1) $2") //Coloca parênteses em volta dos dois primeiros dígitos
-    telefone.value = telefone.value.replace(/(\d{5})(\d)/,"$1-$2")    //Coloca hífen entre o quarto e o quinto dígitos
-    return telefone.value
-}
-
 validarFormulario = () => {
     var resultado = true;
     if(!validarNomeAluno()){
@@ -221,8 +221,6 @@ validarFormulario = () => {
         formulario.reset()
     }
 }   
-
-
 
 const nomeAluno = document.getElementById('nome-aluno')
 const nomeMae = document.getElementById('nome-mae')

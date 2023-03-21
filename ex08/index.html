@@ -42,8 +42,8 @@
                             <div class='erro' id='erro-nome-mae'></div>
                             <div class='dados'>Nome do pai: <input type='text' id='nome-pai' onblur='validarNomePai()'></div>
                             <div class='erro' id='erro-nome-pai'></div>
-                            <div class='dados'>Telefone:<input type='tel' id='telefone'placeholder='(12) 34567-8901' pattern='[1-9]{2}[0-9]{9}' 
-                            onblur='validarTelefone()' onkeypress="test()"></div>
+                            <div class='dados'>Telefone:<input type='tel' id='telefone'placeholder='(12) 34567-8901' pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{5})-([0-9]{4})" 
+                            onblur='validarTelefone()' onkeypress="mudarPadraoTelefone()"></div>
                             <div class='erro' id='erro-telefone'></div>
                             <div class='dados'>Email: <input type='text' id='email'placeholder='usuario@dominio.com' onblur='validarEmail()'></div>
                             <div class='erro' id='erro-email'></div>
