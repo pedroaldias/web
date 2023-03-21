@@ -154,10 +154,6 @@ select:focus {
     font-size: 11px;
 }
 
-#serie{
-    text-align: left;
-}
-
 @media only screen and (max-width: 768px) {
     table,
     table tbody,

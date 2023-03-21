@@ -1,10 +1,9 @@
 let robo = document.querySelector('.robo');
 
-var robotronColors = [
-    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06-07/img/robotron.png',
-    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06-07/img/robotron-vermelho.png',
-    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06-07/img/robotron-rosa.png',
-    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06-07/img/robotron-branco.png',
+const robotronColors = [
+    '',
+    'robotron-vermelho.png',
+    'robotron-branco.png',
     'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06-07/img/robotron-preto.png',
     'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06-07/img/robotron-amarelo.png'
 ];
