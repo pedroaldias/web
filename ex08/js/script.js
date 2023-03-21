@@ -48,10 +48,10 @@ validarData = () => {
 }
 
 validarTelefone = () => {
-    if(telefone.value.length != 11){
+    if(telefone.value.length != 15){
         erroTelefone.innerHTML = '* Número de telefone inválido';
         return false
-    } else if(telefone.value.length == 11){
+    } else if(telefone.value.length == 15){
         erroTelefone.innerHTML = '';
         return true;
     }
@@ -154,6 +154,12 @@ alertaSucesso = () => {
       })
 }
 
+test = () => {
+    telefone.value = telefone.value.replace(/\D/g,"")                 //Remove tudo o que não é dígito
+    telefone.value = telefone.value.replace(/^(\d\d)(\d)/g,"($1) $2") //Coloca parênteses em volta dos dois primeiros dígitos
+    telefone.value = telefone.value.replace(/(\d{5})(\d)/,"$1-$2")    //Coloca hífen entre o quarto e o quinto dígitos
+    return telefone.value
+}
 
 validarFormulario = () => {
     var resultado = true;
