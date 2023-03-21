@@ -133,7 +133,7 @@ validarAtividades = () => {
         erroCheckbox.innerHTML = ''
         return true;
     } else {
-        erroCheckbox.innerHTML = 'Só podem ser selecionadas 3 atividades extracurriculares.'
+        erroCheckbox.innerHTML = 'Máximo: 3 atividades'
         return false;
     }
 }
