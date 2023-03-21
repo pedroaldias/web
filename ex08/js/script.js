@@ -37,7 +37,7 @@ validarNomePai = () => {
 
 validarData = () => {
     const dataHoje = Date.now();
-    var dataEscolhida = Date.parse(dataNascimento.value);
+    const dataEscolhida = Date.parse(dataNascimento.value);
     if (dataEscolhida <= dataHoje && dataEscolhida != ''){
         erroDataNascimento.innerHTML = ''
         return true;
@@ -62,9 +62,9 @@ validarTelefone = () => {
         erroTelefone.innerHTML = '';
         return true;
     }
-    var telefoneArray = telefone.value.split('');
-    var ddd = telefoneArray[0] + telefoneArray[1];
-    var dddsValidos = [
+    let telefoneArray = telefone.value.split('');
+    let ddd = telefoneArray[0] + telefoneArray[1];
+    let dddsValidos = [
         '11', '12', '13', '14', '15', '16', '17', '18', '19', // SP
         '21', '22', '24', // RJ
         '27', '28', // ES
