@@ -7,9 +7,11 @@ validarCampoVazio = (campo) => {
 
 validarNomeAluno = () => {
     if(validarCampoVazio(nomeAluno.value)){
+        nomeAluno.style.borderColor = 'green';
         erroNomeAluno.innerHTML = ''
         return true
     } else if(!validarCampoVazio(nomeAluno.value)){
+        nomeAluno.style.borderColor = 'red';
         erroNomeAluno.innerHTML = '* Campo obrigatório';
         return false
     }
@@ -17,9 +19,11 @@ validarNomeAluno = () => {
 
 validarNomeMae = () => {
     if(validarCampoVazio(nomeMae.value)){
+        nomeMae.style.borderColor = 'green';
         erroNomeMae.innerHTML = ''
         return true
     } else if(!validarCampoVazio(nomeMae.value)){
+        nomeMae.style.borderColor = 'red';
         erroNomeMae.innerHTML = '* Campo obrigatório';
         return false
     }
@@ -27,9 +31,11 @@ validarNomeMae = () => {
 
 validarNomePai = () => {
     if(validarCampoVazio(nomePai.value)){
+        nomePai.style.borderColor = 'green';
         erroNomePai.innerHTML = ''
         return true
     } else if(!validarCampoVazio(nomePai.value)){
+        nomePai.style.borderColor = 'red';
         erroNomePai.innerHTML = '* Campo obrigatório';
         return false
     }
@@ -39,9 +45,11 @@ validarData = () => {
     const dataHoje = Date.now();
     const dataEscolhida = Date.parse(dataNascimento.value);
     if (dataEscolhida <= dataHoje && dataEscolhida != ''){
+        dataNascimento.style.borderColor = 'green';
         erroDataNascimento.innerHTML = ''
         return true;
     } else {
+        dataNascimento.style.borderColor = 'red';
         erroDataNascimento.innerHTML = '* Data inválida';
         return false
     }
@@ -55,15 +63,8 @@ mudarPadraoTelefone = () => {
 }
 
 validarTelefone = () => {
-    if(telefone.value.length != 15){
-        erroTelefone.innerHTML = '* Número de telefone inválido';
-        return false
-    } else if(telefone.value.length == 15){
-        erroTelefone.innerHTML = '';
-        return true;
-    }
     let telefoneArray = telefone.value.split('');
-    let ddd = telefoneArray[0] + telefoneArray[1];
+    let ddd = telefoneArray[1] + telefoneArray[2];
     let dddsValidos = [
         '11', '12', '13', '14', '15', '16', '17', '18', '19', // SP
         '21', '22', '24', // RJ
@@ -92,20 +93,31 @@ validarTelefone = () => {
         '95', // RR
         '96', // AP
     ];
-    if(dddsValidos.includes(ddd)){
+    if (dddsValidos.includes(ddd) && telefone.value.length == 15) {
+        telefone.style.borderColor = 'green';
         erroTelefone.innerHTML = ''
         return true
-    } else {
-        erroTelefone.innerHTML = '* DDD inválido'
-        return false
-    }   
+    } 
+    else {
+        if(!dddsValidos.includes(ddd)){
+            telefone.style.borderColor = 'red';
+            erroTelefone.innerHTML = '* DDD inválido'
+            return false; 
+        } else {
+            telefone.style.borderColor = 'red';
+            erroTelefone.innerHTML = '* Número de telefone inválido ';
+            return false;
+        }
+    }
 }
 
 validarEmail = () => {
     if(emailRegex.test(email.value)){
-        erroEmail.innerHTML = ''
+        email.style.borderColor = 'green';
+        erroEmail.innerHTML = '';
         return true;
-    } else if(!emailRegex.test(email.value)){
+    } else {
+        email.style.borderColor = 'red';
         erroEmail.innerHTML = '* Email inválido';
         return false;
     }
@@ -137,6 +149,7 @@ validarAtividades = () => {
         }
     }
     if (c <= 3) {
+
         erroCheckbox.innerHTML = ''
         return true;
     } else {
@@ -159,6 +172,14 @@ alertaSucesso = () => {
         showConfirmButton: false,
         timer: 1500
       })
+}
+resetarBordas = () => {
+    nomeAluno.style.borderColor = '#cccccce1';
+    dataNascimento.style.borderColor = '#cccccce1';
+    nomeMae.style.borderColor = '#cccccce1';
+    nomePai.style.borderColor = '#cccccce1';
+    telefone.style.borderColor = '#cccccce1';
+    email.style.borderColor = '#cccccce1';
 }
 
 validarFormulario = () => {
@@ -218,6 +239,7 @@ validarFormulario = () => {
     }
     if(resultado){  
         alertaSucesso()
+        resetarBordas()
         formulario.reset()
     }
 }   
@@ -250,4 +272,3 @@ const erroCheckbox = document.getElementById('erro-checkbox')
 const erroTurno = document.getElementById('erro-turno')
 
 const formulario = document.getElementById('formulario')
-

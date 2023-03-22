@@ -27,7 +27,7 @@ th,
 td {
     padding: 1rem;
     vertical-align: top;
-    border-top: 1px solid #afafaf;
+    border-top: 1px solid #afafaf42;
 }
 
 th {
@@ -92,8 +92,9 @@ footer {
     width: 98%;
     padding: 0.5rem;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccce1;
     font-size: 11px;
+    margin-top: 0.5rem;
 }
 
 .final-buttons {
