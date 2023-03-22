@@ -34,18 +34,18 @@
                     </tr>
                     <tr>    
                         <td>
-                            <div class='dados'>Nome do aluno: <input type='text' id='nome-aluno' onblur='validarNomeAluno()'></div>
+                            <div class='dados'>* Nome do aluno: <input type='text' id='nome-aluno' onblur='validarNomeAluno()'></div>
                             <div class='erro' id='erro-nome-aluno'></div>
-                            <div class='dados'>Data de nascimento: <input type='date' id='data-nascimento' onblur='validarData()'></div>
+                            <div class='dados'>* Data de nascimento: <input type='date' id='data-nascimento' onblur='validarData()'></div>
                             <div class='erro' id='erro-data-nascimento'></div>
-                            <div class='dados'>Nome da mãe: <input type='text' id='nome-mae' onblur='validarNomeMae()'></div>
+                            <div class='dados'>* Nome da mãe: <input type='text' id='nome-mae' onblur='validarNomeMae()'></div>
                             <div class='erro' id='erro-nome-mae'></div>
-                            <div class='dados'>Nome do pai: <input type='text' id='nome-pai' onblur='validarNomePai()'></div>
+                            <div class='dados'>* Nome do pai: <input type='text' id='nome-pai' onblur='validarNomePai()'></div>
                             <div class='erro' id='erro-nome-pai'></div>
-                            <div class='dados'>Telefone:<input type='tel' id='telefone'placeholder='(12) 34567-8901' pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{5})-([0-9]{4})" 
+                            <div class='dados'>* Telefone:<input type='tel' id='telefone'placeholder='(12) 34567-8901' pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{5})-([0-9]{4})" 
                             onblur='validarTelefone()' onkeypress="mudarPadraoTelefone()"></div>
                             <div class='erro' id='erro-telefone'></div>
-                            <div class='dados'>Email: <input type='text' id='email'placeholder='usuario@dominio.com' onblur='validarEmail()'></div>
+                            <div class='dados'>* Email: <input type='text' id='email'placeholder='usuario@dominio.com' onblur='validarEmail()'></div>
                             <div class='erro' id='erro-email'></div>
                         </td>
                     </tr>
@@ -61,7 +61,7 @@
                 <tr>
                     <td>
                         <div class='dados'>
-                            <div>Série:</div>
+                            <div>* Série:</div>
                                 <select id='serie' onchange='validarEscolaridade()'>
                                     <option value='infantil' id='infantil'>Ensino Infantil</option>
                                     <option value='fundamental' id='fundamental'>Ensino Fundamental</option>
@@ -96,7 +96,7 @@
                     </td>
                     <td>
                          <div class='dados'>
-                            <div class='turno' id='turno-title'>Turno:</div>
+                            <div class='turno' id='turno-title'>* Turno:</div>
                             <div class='radio-container' id='turno'>
                                 <div>
                                     <input type='radio' id='manha' name='turno'>
