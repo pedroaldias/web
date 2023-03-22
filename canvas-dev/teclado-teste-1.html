@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <script>
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+
+        var posicao = 0;
+        desenharPersonagem();
+
+        document.addEventListener('keydown', function(evento){
+            if(evento.keyCode == 37){
+                posicao -= 10;
+                desenharPersonagem();
+            }
+            else if(evento.keyCode == 39){
+                posicao += 10;
+                desenharPersonagem();
+            }
+        });
+
+        function desenharPersonagem() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.fillRect(posicao, 100, 20, 50)
+        }
+    </script>
+</body>
+</html>
