@@ -12,23 +12,32 @@
         var canvas = document.getElementById('canvas');
         var context = canvas.getContext('2d');
 
-        var posicao = 0;
+        var posicaoX = 0;
+        var posicaoY = 0;
         desenharPersonagem();
 
         document.addEventListener('keydown', function(evento){
             if(evento.keyCode == 37){
-                posicao -= 10;
+                posicaoX -= 10;
+                desenharPersonagem();
+            }
+            else if(evento.keyCode == 38){
+                posicaoY -= 10;
                 desenharPersonagem();
             }
             else if(evento.keyCode == 39){
-                posicao += 10;
+                posicaoX += 10;
+                desenharPersonagem();
+            }
+            else if(evento.keyCode == 40){
+                posicaoY += 10;
                 desenharPersonagem();
             }
         });
 
         function desenharPersonagem() {
             context.clearRect(0, 0, canvas.width, canvas.height);
-            context.fillRect(posicao, 100, 20, 50)
+            context.fillRect(posicaoX, posicaoY, 20, 50)
         }
     </script>
 </body>
