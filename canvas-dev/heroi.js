@@ -2,6 +2,8 @@ const direcaoEsquerda = 1;
 const direcaoDireita = 2;
 const direcaoCima = -1;
 const direcaoBaixo = -2;
+const img = new Image();
+img.src = 'img/cavaleiro.png';
 
 function Heroi(context, teclado, animacao){
     this.context = context;
@@ -33,15 +35,15 @@ Heroi.prototype = {
     },
 
     desenhar: function(){
-        this.context.fillRect(this.x, this.y, 20, 50);
+        this.context.drawImage(img, this.x, this.y, 75, 85);
     },
 
     atirar: function(){
         var tiro = new Tiro(this.context);
         tiro.x = this.x + 10;
         tiro.y = this.y + 10;
-        tiro.raio = 2;
-        tiro.cor = 'red';
+        tiro.raio = 10;
+        tiro.cor = 'black';
 
         if (this.direcao == direcaoEsquerda){
             tiro.velocidadeX = -20;
