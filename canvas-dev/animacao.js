@@ -21,20 +21,20 @@ Animacao.prototype = {
     proximoFrame: function(){
         if(!this.ligado) return;
         this.limparTela();
-        for(var i in this.sprites){
+        for(const i in this.sprites){
             this.sprites[i].atualizar()
         }
-        for(var i in this.sprites){
+        for(const i in this.sprites){
             this.sprites[i].desenhar()
         }
-        var animacao = this;
+        const animacao = this;
         requestAnimationFrame(function(){
             animacao.proximoFrame();
         })
     },
 
     limparTela: function(){
-        var ctx = this.context;
+        const ctx = this.context;
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     },
 

@@ -1,11 +1,11 @@
-let robo = document.querySelector('.robo');
+const robo = document.querySelector('.robo');
 
 const robotronColors = [
-    '',
+    'robotron.png',
     'robotron-vermelho.png',
-    'robotron-branco.png',
-    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06-07/img/robotron-preto.png',
-    'file:///C:/Users/2021327623.IFAL-MACEIO/web/ex06-07/img/robotron-amarelo.png'
+    '',
+    '',
+    ''
 ];
 
 getIndex = () => robotronColors.indexOf(robo.src);

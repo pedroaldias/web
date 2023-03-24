@@ -7,29 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <canvas id="canvas" width="500" height="500"></canvas>
+    <canvas id="canvas-teclado-1" width="500" height="500"></canvas>
     <script>
-        var canvas = document.getElementById('canvas');
-        var context = canvas.getContext('2d');
-
-        var posicaoX = 0;
-        var posicaoY = 0;
+        const canvas = document.getElementById('canvas-teclado-1');
+        const context = canvas.getContext('2d');
+        
+        let posicaoX = 0;
+        let posicaoY = 0;
         desenharPersonagem();
 
         document.addEventListener('keydown', function(evento){
-            if(evento.keyCode == 37){
+            if(evento.keyCode == 37){ //seta esquerda
                 posicaoX -= 10;
                 desenharPersonagem();
             }
-            else if(evento.keyCode == 38){
+            else if(evento.keyCode == 38){ // seta cima
                 posicaoY -= 10;
                 desenharPersonagem();
             }
-            else if(evento.keyCode == 39){
+            else if(evento.keyCode == 39){ // seta direita
                 posicaoX += 10;
                 desenharPersonagem();
             }
-            else if(evento.keyCode == 40){
+            else if(evento.keyCode == 40){ // seta baixo
                 posicaoY += 10;
                 desenharPersonagem();
             }

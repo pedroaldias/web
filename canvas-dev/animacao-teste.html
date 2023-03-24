@@ -11,10 +11,10 @@
 <body>
     <canvas id="canvas-animacao" width="1000" height="1000"></canvas>
     <script>
-        var canvas = document.getElementById('canvas-animacao');
-        var context = canvas.getContext('2d');
+        const canvas = document.getElementById('canvas-animacao');
+        const context = canvas.getContext('2d');
 
-        var b1 = new Bola(context);
+        const b1 = new Bola(context);
         b1.x = 100;
         b1.y = 200;
         b1.velocidadeX = 20;
@@ -22,7 +22,7 @@
         b1.cor = 'red';
         b1.raio = 20;
 
-        var b2 = new Bola(context);
+        const b2 = new Bola(context);
         b2.x = 200;
         b2.y = 100;
         b2.velocidadeX = -10;
@@ -30,7 +30,7 @@
         b2.cor = 'blue';
         b2.raio = 30;
 
-        var b3 = new Bola(context);
+        const b3 = new Bola(context);
         b3.x = 300;
         b3.y = 300;
         b3.velocidadeX = 30;
@@ -38,7 +38,7 @@
         b3.cor = 'green';
         b3.raio = 40;
 
-        var b4 = new Bola(context);
+        const b4 = new Bola(context);
         b4.x = 400;
         b4.y = 400;
         b4.velocidadeX = 40;
@@ -46,7 +46,7 @@
         b4.cor = 'yellow';
         b4.raio = 50;
 
-        var b5 = new Bola(context);
+        const b5 = new Bola(context);
         b5.x = 500;
         b5.y = 500;
         b5.velocidadeX = 5;
@@ -54,7 +54,7 @@
         b5.cor = 'orange';
         b5.raio = 60;
 
-        var animacao = new Animacao(context);
+        const animacao = new Animacao(context);
         animacao.novoSprite(b1);
         animacao.novoSprite(b2);
         animacao.novoSprite(b3);

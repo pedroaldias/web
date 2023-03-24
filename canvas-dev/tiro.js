@@ -1,4 +1,4 @@
-function Bola(context){
+function Tiro(context){
     this.context = context;
     this.x = 0;
     this.y = 0;
@@ -9,17 +9,8 @@ function Bola(context){
     this.raio = 10;
 }
 
-Bola.prototype = {
-    atualizar: function(){
-        const ctx = this.context;
-        
-        if(this.x < this.raio || this.x > ctx.canvas.width - this.raio){
-            this.velocidadeX *= -1;
-        }
-        if(this.y < this.raio || this.y > ctx.canvas.height - this.raio){
-            this.velocidadeY *= -1;
-        }
-
+Tiro.prototype = {
+    atualizar: function(){   
         this.x += this.velocidadeX;
         this.y += this.velocidadeY
     },
