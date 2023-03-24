@@ -35,7 +35,7 @@ Heroi.prototype = {
     },
 
     desenhar: function(){
-        this.context.drawImage(img, this.x, this.y, 75, 85);
+        this.context.drawImage(img, this.x, this.y, 100, 140);
     },
 
     atirar: function(){
