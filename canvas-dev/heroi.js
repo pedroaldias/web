@@ -20,7 +20,7 @@ Heroi.prototype = {
             this.x -= 10;
             this.direcao = direcaoEsquerda;
         }
-        else if (this.teclado.pressionada(setaDireita) && this.x < this.context.canvas.width - 20){
+        else if (this.teclado.pressionada(setaDireita) && this.x < this.context.canvas.width - 100){
             this.x += 10;
             this.direcao = direcaoDireita;
         }
@@ -28,7 +28,7 @@ Heroi.prototype = {
             this.y -= 10;
             this.direcao = direcaoCima;
         }
-        else if (this.teclado.pressionada(setaBaixo) && this.y < this.context.canvas.height - 50){
+        else if (this.teclado.pressionada(setaBaixo) && this.y < this.context.canvas.height - 150){
             this.y += 10;
             this.direcao = direcaoBaixo;
         }

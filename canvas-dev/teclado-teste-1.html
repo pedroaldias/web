@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <canvas id="canvas-teclado-1" width="500" height="500"></canvas>
     <script>
         const canvas = document.getElementById('canvas-teclado-1');
         const context = canvas.getContext('2d');
-        
+
         let posicaoX = 0;
         let posicaoY = 0;
         desenharPersonagem();
 
-        document.addEventListener('keydown', function(evento){
-            if(evento.keyCode == 37){ //seta esquerda
+        document.addEventListener('keydown', function (evento) {
+            if (evento.keyCode == 37) { //seta esquerda
                 posicaoX -= 10;
                 desenharPersonagem();
             }
-            else if(evento.keyCode == 38){ // seta cima
+            else if (evento.keyCode == 38) { // seta cima
                 posicaoY -= 10;
                 desenharPersonagem();
             }
-            else if(evento.keyCode == 39){ // seta direita
+            else if (evento.keyCode == 39) { // seta direita
                 posicaoX += 10;
                 desenharPersonagem();
             }
-            else if(evento.keyCode == 40){ // seta baixo
+            else if (evento.keyCode == 40) { // seta baixo
                 posicaoY += 10;
                 desenharPersonagem();
             }
@@ -41,4 +43,5 @@
         }
     </script>
 </body>
+
 </html>

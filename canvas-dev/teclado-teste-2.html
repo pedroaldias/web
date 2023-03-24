@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <script src="teclado.js"></script>
 </head>
+
 <body>
     <canvas id="canvas-teclado-2" width="1000" height="1000"></canvas>
     <script>
@@ -14,35 +16,36 @@
         const context = canvas.getContext('2d');
 
         const img = new Image();
-        img.src = 'img/scarecrow.png';
+        img.src = 'img/cavaleiro.png';
         let posicaoX = 0;
         let posicaoY = 0;
         desenharPersonagem();
-        
+
         let teclado = new Teclado(document);
         requestAnimationFrame(animar)
 
-        function animar(){
-            if (teclado.pressionada(setaEsquerda)){
+        function animar() {
+            if (teclado.pressionada(setaEsquerda)) {
                 posicaoX -= 10;
             }
-            else if (teclado.pressionada(setaCima)){
+            else if (teclado.pressionada(setaCima)) {
                 posicaoY -= 10;
             }
-            else if (teclado.pressionada(setaDireita)){
+            else if (teclado.pressionada(setaDireita)) {
                 posicaoX += 10;
             }
-            else if (teclado.pressionada(setaBaixo)){
+            else if (teclado.pressionada(setaBaixo)) {
                 posicaoY += 10;
             }
             desenharPersonagem();
             requestAnimationFrame(animar);
         }
 
-        function desenharPersonagem(){
+        function desenharPersonagem() {
             context.clearRect(0, 0, canvas.width, canvas.height);
             context.drawImage(img, posicaoX, posicaoY, 50, 55);
         }
     </script>
 </body>
+
 </html>
