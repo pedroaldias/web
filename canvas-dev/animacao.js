@@ -37,7 +37,4 @@ Animacao.prototype = {
         const ctx = this.context;
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     },
-
-
-
 }
