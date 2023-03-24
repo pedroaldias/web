@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,94 +9,114 @@
     <link rel='stylesheet' href='styles/style.css'>
     <link rel='stylesheet' href='styles/sweetalert.css'>
 </head>
+
 <body>
     <header>
         <table>
             <tr>
                 <th>
                     <div class='icone-escola'><img src='img/escola.png' alt='Escola'></div>
-                    <div class='titulo'><h1>Escola Virtual</h1></div>     
+                    <div class='titulo'>
+                        <h1>Escola Virtual</h1>
+                    </div>
                 </th>
             </tr>
             <tr>
                 <th>
-                    <div class='subtitulo'><h2>Formulário de Pré-Matrícula</h2></div>
+                    <div class='subtitulo'>
+                        <h2>Formulário de Pré-Matrícula</h2>
+                    </div>
                 </th>
             </tr>
         </table>
     </header>
     <form id='formulario' onsubmit='return false'>
         <section>
-                <table>
-                    <tr>
-                        <th>
-                            <div><h3>Dados Pessoais:</h3></div>
-                        </th>
-                    </tr>
-                    <tr>    
-                        <td>
-                            <div class='dados'>* Nome do aluno: <input type='text' id='nome-aluno' onblur='validarNomeAluno()'></div>
-                            <div class='erro' id='erro-nome-aluno'></div>
-                            <div class='dados'>* Data de nascimento: <input type='date' id='data-nascimento' onblur='validarData()'></div>
-                            <div class='erro' id='erro-data-nascimento'></div>
-                            <div class='dados'>* Nome da mãe: <input type='text' id='nome-mae' onblur='validarNomeMae()'></div>
-                            <div class='erro' id='erro-nome-mae'></div>
-                            <div class='dados'>* Nome do pai: <input type='text' id='nome-pai' onblur='validarNomePai()'></div>
-                            <div class='erro' id='erro-nome-pai'></div>
-                            <div class='dados'>* Telefone:<input type='tel' id='telefone'placeholder='(12) 34567-8901' pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{5})-([0-9]{4})" 
-                            onblur='validarTelefone()' onkeypress="mudarPadraoTelefone()"></div>
-                            <div class='erro' id='erro-telefone'></div>
-                            <div class='dados'>* Email: <input type='text' id='email'placeholder='usuario@dominio.com' onblur='validarEmail()'></div>
-                            <div class='erro' id='erro-email'></div>
-                        </td>
-                    </tr>
-                </table>
+            <table>
+                <tr>
+                    <th>
+                        <div>
+                            <h3>Dados Pessoais:</h3>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class='dados'>* Nome do aluno: <input type='text' id='nome-aluno'
+                                onblur='validarNomeAluno()'></div>
+                        <div class='erro' id='erro-nome-aluno'></div>
+                        <div class='dados'>* Data de nascimento: <input type='date' id='data-nascimento'
+                                onblur='validarData()'></div>
+                        <div class='erro' id='erro-data-nascimento'></div>
+                        <div class='dados'>* Nome da mãe: <input type='text' id='nome-mae' onblur='validarNomeMae()'>
+                        </div>
+                        <div class='erro' id='erro-nome-mae'></div>
+                        <div class='dados'>* Nome do pai: <input type='text' id='nome-pai' onblur='validarNomePai()'>
+                        </div>
+                        <div class='erro' id='erro-nome-pai'></div>
+                        <div class='dados'>* Telefone:<input type='tel' id='telefone' placeholder='(12) 34567-8901'
+                                pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{5})-([0-9]{4})" onblur='validarTelefone()'
+                                onkeypress="mudarPadraoTelefone()"></div>
+                        <div class='erro' id='erro-telefone'></div>
+                        <div class='dados'>* Email: <input type='text' id='email' placeholder='usuario@dominio.com'
+                                onblur='validarEmail()'></div>
+                        <div class='erro' id='erro-email'></div>
+                    </td>
+                </tr>
+            </table>
         </section>
         <section>
             <table>
                 <tr>
                     <th>
-                        <div><h3>Informações de Matrícula:</h3></div>
+                        <div>
+                            <h3>Informações de Matrícula:</h3>
+                        </div>
                     </th>
                 </tr>
                 <tr>
                     <td>
                         <div class='dados'>
                             <div>* Série:</div>
-                                <select id='serie' onchange='validarEscolaridade()'>
-                                    <option value='infantil' id='infantil'>Ensino Infantil</option>
-                                    <option value='fundamental' id='fundamental'>Ensino Fundamental</option>
-                                    <option value='medio' id='medio'>Ensino Médio</option> 
-                            </div>
+                            <select id='serie' onchange='validarEscolaridade()'>
+                                <option value='infantil' id='infantil'>Ensino Infantil</option>
+                                <option value='fundamental' id='fundamental'>Ensino Fundamental</option>
+                                <option value='medio' id='medio'>Ensino Médio</option>
+                        </div>
                         </div>
                     </td>
                     <td>
                         <div class='dados'>
                             <div>Atividades Extracurriculares:</div>
                             <div class='checkbox-container'>
-                                <input type='checkbox' class='checkbox-items' onchange='validarAtividades()' id='informatica'>
+                                <input type='checkbox' class='checkbox-items' onchange='validarAtividades()'
+                                    id='informatica'>
                                 <label for='informatica'>Informática</label>
                                 <br>
-                                <input type='checkbox' class='checkbox-items' onchange='validarAtividades()' id='musica'>
+                                <input type='checkbox' class='checkbox-items' onchange='validarAtividades()'
+                                    id='musica'>
                                 <label for='musica'>Música</label>
                                 <br>
-                                <input type='checkbox' class='checkbox-items' onchange='validarAtividades()' id='ballet'>
+                                <input type='checkbox' class='checkbox-items' onchange='validarAtividades()'
+                                    id='ballet'>
                                 <label for='ballet'>Ballet</label>
                                 <br>
-                                <input type='checkbox' class='checkbox-items' onchange='validarAtividades()' id='pintura'>
+                                <input type='checkbox' class='checkbox-items' onchange='validarAtividades()'
+                                    id='pintura'>
                                 <label for='pintura'>Pintura</label>
                                 <br>
                                 <input type='checkbox' class='checkbox-items' onchange='validarAtividades()' id='judo'>
                                 <label for='judo'>Judô</label>
                                 <br>
-                                <input type='checkbox' class='checkbox-items' onchange='validarAtividades()' id='futebol'>
+                                <input type='checkbox' class='checkbox-items' onchange='validarAtividades()'
+                                    id='futebol'>
                                 <label for='futebol'>Futebol</label>
                                 <div class=erro id='erro-checkbox'></div>
                             </div>
                         </div>
                     </td>
                     <td>
-                         <div class='dados'>
+                        <div class='dados'>
                             <div class='turno' id='turno-title'>* Turno:</div>
                             <div class='radio-container' id='turno'>
                                 <div>
@@ -108,19 +129,21 @@
                                 </div>
                                 <div class='erro' id='erro-turno'></div>
                             </div>
-                        </div>  
+                        </div>
                     </td>
                 </tr>
             </table>
         </section>
         <footer>
             <div class='final-buttons'>
-                <label class='submit-button'><button type='submit' onclick='validarFormulario()'>Enviar formulário</button></label>
+                <label class='submit-button'><button type='submit' onclick='validarFormulario()'>Enviar
+                        formulário</button></label>
                 <label class='reset-button'><button type='reset'>Limpar formulário</button></label>
-            </div> 
+            </div>
         </footer>
     </form>
     <script src='js/script.js'></script>
     <script src='js/sweetalert.js'></script>
 </body>
+
 </html>
