@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Insert row in a table - w3resource</title>
+</head>
+
+<body>
+    <input type="text" id="txtNumRows" />
+    <button id="jsAddRows" onclick="js_add_rows()"> Add Rows </button>
+    <table id="sampleTable" border="1">
+        <tr>
+            <td>Row1 cell1</td>
+            <td>Row1 cell2</td>
+        </tr>
+        <tr>
+            <td>Row2 cell1</td>
+            <td>Row2 cell2</td>
+        </tr>
+    </table>
+    <br>
+    <script>
+        function js_add_rows() {
+            const table = document.getElementById("sampleTable");
+            const input = parseInt(document.getElementById("txtNumRows").value);
+            const position = table.rows.length;
+
+            if (isNaN(input)) {
+                alert('Must be a number')
+                return
+            } 
+            else if (input >= 1 && input <= 10) {
+                for (let i = position; i < position + input; i++) {
+                    const row = table.insertRow(i);
+                    row.innerHTML = `Row${i + 1}`
+                }
+            } else {
+                alert('Please enter a number between 1 and 10');
+            }
+            input = "";
+        }    
+    </script>
+</body>
+</html>
