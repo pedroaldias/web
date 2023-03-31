@@ -5,44 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
-    <table>
-        <tr>
-            <td>
-                <label for="categoria">Categoria: </label>
-                <select name="categoria" id="categoria">
-                    <option value="mercado">Mercado</option>
-                    <option value="transporte">Transporte</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="valor">Valor: </label>
-                <input type="text">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="data">Data: </label>
-                <input type="date" name="data" id="data">
-            </td>
-        </tr>
-        <tr class="buttons">
-            <td><button onclick="adicionar()">Adicionar</button></td>
-            <td><button onclick="calcular()">Calcular</button></td>
-        </tr>   
-        <tr>
-            <td>
-                <table> 
-                    <th>Extrato Bancário</th>
-                    <tr></tr>
-                    <tr></tr>
-                </table>
+    <table class="container">
+        <thead>
+            <tr>
+                <th class="title" colspan="2">Lista</th>
             </tr>
-            </td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="categoria">Categoria: </label>
+                    <select name="categoria" id="categoria" onchange="getCategoriaSelecionada()">
+                        <option value="none" selected disabled hidden>Escolha uma categoria</option>
+                        <option value="mercado">Mercado</option>
+                        <option value="transporte">Transporte</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="valor">Valor: </label>
+                    <input type="text" name="valor" id="valor">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="data">Data: </label>
+                    <input type="date" name="data" id="data">
+                </td>
+            </tr>
+            <tr>
+                <td class="buttons">
+                    <button onclick="adicionar()">Adicionar</button>
+                    <button onclick="calcular()">Calcular</button>
+                </td>
+            </tr>   
+            <tr>
+                <td>
+                    <table class="extrato"> 
+                        <thead>
+                            <tr>
+                                <th>Extrato Bancário</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr></tr>
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
     </table>
     <script src="script.js"></script>
 </body>

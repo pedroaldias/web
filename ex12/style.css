@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+/*
 table {
     border: 1px solid rgb(0, 0, 0);
     margin-left: auto;
@@ -7,8 +10,6 @@ table {
 th {
     font-weight: lighter;
 }
-
-
 
 select {
     margin-top: 5px;
@@ -24,8 +25,6 @@ input#data {
     width: 98%;
 }
 
-
-
 #categoria {
     border-left: auto;
     border-right: auto;
@@ -36,4 +35,89 @@ input#data {
     justify-content: center;
     margin-top: 5px;
     margin-bottom: 10px;
+    border-radius: 3px;
+} */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+table{
+    border-radius: 3px;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    line-height: 2;
+    color: #333;
+}
+
+
+.container {
+    margin: 50px auto;
+    width: 30%;
+    border-collapse: collapse;  
+    border: 1px solid #ddd;
+}
+
+.title {
+    background-color: #ddd;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #1d1d1d;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #191dff;
+}
+
+.extrato {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.extrato th {
+    background-color: #020202;
+    color: #fff;
+    padding: 10px;
+}
+
+#categoria{
+    margin-top: 5px;
+    width: 100%;
+}
+
+#valor{
+    margin-top: 5px;
+    width: 100%;
+}
+
+#data{
+    margin-top: 5px;
+    width: 100%;
+}
+
