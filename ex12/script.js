@@ -36,26 +36,30 @@ function adicionar() {
 function calcular(){
     // Pegando todas as linhas da tabela
     let linhas = extrato.getElementsByTagName('tr');
+    console.log(linhas)
 
     // Criando variável para armazenar o total
-    let total = 0;
+    let valorTotal = 0;
 
     // Percorrendo todas as linhas da tabela
-    for(let i = 0; i < linhas.length - 1; i++){
+    for(let i = 1; i < linhas.length; i++){
         // Pegando o valor da célula de valor
         let valorLinha = linhas[i].getElementsByTagName('td')[2].innerHTML;
-        console.log(valorLinha)
         // Convertendo o valor para float
         let valorFloat = parseFloat(valorLinha);
         // Somando o valor da célula ao total
-        total += valorFloat;
+        valorTotal += valorFloat;
     }
-    console.log(total)
-    // Atribuindo o total ao elemento com id total
-    
+    resumo(valorTotal);
 }
 
-const resultado = document.getElementById('total');
+function resumo(valorTotal){
+    window.location.href = 'resumo.html'
+    const total = document.getElementById('total');
+    total.innerHTML = `Valor total: R$ ${valorTotal}`
+}
+
+
 const extrato = document.querySelector('.extrato');
 const categoria = document.getElementById('categoria');
 const valor = document.getElementById('valor');
