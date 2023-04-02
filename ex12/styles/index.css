@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    line-height: 2;
+    color: #333;
+}
+
+input {
+    border: 0.5px solid black;
+    border-radius: 3px;
+    height: 22px;
+    padding: 5px;
+}
+
+select {
+    border: 0.5px solid black;
+    border-radius: 3px;
+    height: 22px;
+}
+
+.container {
+    margin: 50px auto;
+    width: 20%;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    position: relative;
+    right: 200px;
+}
+
+.title {
+    background-color: #ddd;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons button {
+    padding: 5px 20px;
+    margin: 5px;
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #333;
+    color: #ddd;
+}
+
+.extrato {
+    width: 20%;
+    border-radius: 3px;
+    position: relative;
+    left: 200px;
+    bottom: 419px;
+    border: 1px solid #ddd;
+}
+
+.title-extrato {
+    background-color: #ddd;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+}
+
+#categoria {
+    margin-top: 5px;
+    width: 100%;
+}
+
+#valor {
+    margin-top: 5px;
+    width: 100%;
+}
+
+#data {
+    margin-top: 5px;
+    width: 100%;
+}
+

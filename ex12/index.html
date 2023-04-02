@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
     <table class="container">
@@ -28,7 +28,8 @@
             <tr>
                 <td>
                     <label for="valor">Valor: </label>
-                    <input type="text" name="valor" id="valor">
+                    <input type="text" name="valor" id="valor" onchange="verificarValor()">
+                    <div id="valor-erro"></div>
                 </td>
             </tr>
             <tr>
@@ -43,17 +44,15 @@
                     <button onclick="calcular()">Calcular</button>
                 </td>
             </tr>   
-            <tr>
-                <td>
-                    <table class="extrato"> 
-                        <thead>
-                            <th>Extrato Bancário</th>
-                        </thead>
-                    </table>
-                </td>
-            </tr>
         </tbody>
     </table>
-    <script src="script.js"></script>
+    <table class="extrato"> 
+        <thead>
+            <tr>
+                <th class="title-extrato" colspan="3">Extrato Bancário</th>
+            </tr>
+        </thead>
+    </table>
+    <script src="js/index.js"></script>
 </body>
 </html>

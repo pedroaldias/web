@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport", initial-scale=1.0>
+    <meta name="viewport" , initial-scale=1.0>
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="js/resumo.js"></script>
+    <link rel="stylesheet" href="styles/resumo.css">
 </head>
+
 <body>
-    <div class="titulo-resumo">Resumo</div>
-    <div id="total"></div>
+    <table class="tabela-resultado">
+        <thead>
+            <tr>
+                <th class="titulo-resumo" colspan="2">Resumo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="resultado-total"></td>
+                <td id="resultado-total-valor"></td>
+            </tr>
+            <tr>
+                <td id="resultado-mercado"></td>
+                <td id="resultado-mercado-valor"></td>
+            </tr>
+            <tr>
+                <td id="resultado-transporte"></td>
+                <td id="resultado-transporte-valor"></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
