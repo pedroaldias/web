@@ -96,6 +96,3 @@ const data = document.getElementById('data');
 const valorErro = document.getElementById('valor-erro');
 var valorMercado = 0;
 var valorTransporte = 0;
-
-
-
