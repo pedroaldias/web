@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>
+    Recorte e Enquadramento
+  </title>
+</head>
+
+<body>
+  <canvas id="canvas-clipping" width="500" height="500">
+  </canvas>
+  <script>
+    const canvas = document.getElementById('canvas-clipping');
+    const ctx = canvas.getContext('2d');
+
+    const imgSonic = new Image();
+    imgSonic.src = 'img/spritesheet.png';
+
+    imgSonic.onload = function() {
+      const linhas = 3;
+      const colunas = 8;
+      
+      const largura = imgSonic.width / colunas;
+      const altura = imgSonic.height / linhas;
+
+      const colunaSelecionada = 7;
+      const linhaSelecionada = 2;
+
+      const x = largura * colunaSelecionada;
+      const y = altura * linhaSelecionada;
+
+
+      ctx.drawImage(
+        imgSonic,
+        x,
+        y,
+        largura,
+        altura,
+        100,
+        100,
+        largura,
+        altura
+      );
+    }
+  </script>
+</body>
+</html>
