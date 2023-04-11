@@ -1,14 +1,14 @@
 window.onload = () => {
 
     
-
+    let anos = localStorage.getItem('arrayAnos')
     let total = localStorage.getItem('total');
     let mesesValorString = localStorage.getItem('mesesValor')
     let valorMercado = localStorage.getItem('valorMercado');
     let valorTransporte = localStorage.getItem('valorTransporte');
     let tabela = document.querySelector('.tabela-resultado')
     let mesesValor = JSON.parse(mesesValorString);
-    console.log(Object.keys(mesesValor))
+    console.log(anos)
 
     let resultadoTotal = document.getElementById('resultado-total');
     let resultadoTotalValor = document.getElementById('resultado-total-valor');
@@ -27,11 +27,23 @@ window.onload = () => {
         let celulaMes = novaLinha.insertCell(0);
         let celulaValor = novaLinha.insertCell(1);
         let valor = mesesValor[mes];
-        const mesNumero = parseInt(mes.substr(4));
-        const nomeMes = new Date(2021, mesNumero - 1, 1).toLocaleString('pt-BR', { month: 'long' });
-        const ano = mes.substr(0, 4);
-        celulaMes.textContent = `Total no mês de ${charAt(nomeMes)} de ${ano}`;
-        celulaValor.textContent = `R$` + parseFloat(valor).toFixed(2);
+        let mesNome = ''
+        switch(mes){
+            case '1':
+                mesNome = ' de Janeiro'
+                break;
+            case '2':
+                mesNome = ' de Fevereiro'
+                break;
+            case '3':
+                mesNome = ' de Março'
+                break;
+            case '4':
+                mesNome = ' de Abril'
+                break;
+        }
+        celulaMes.textContent = `Total no mês de ${mesNome} de `;
+        celulaValor.textContent = `R$${parseFloat(valor).toFixed(2)}`;
     }
 
     resultadoMercado.innerHTML = `Total de gastos com mercado`
