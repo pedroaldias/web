@@ -11,10 +11,12 @@ td {
     border: 1px solid #ddd;
 }
 
-table {
-    margin: 0 auto;
-    border-collapse: collapse;
 
+.wrapper {
+    margin: 150px auto;
+    border-collapse: collapse;
+    display: flex;
+    justify-content: center;
 }
 
 body {
@@ -22,6 +24,13 @@ body {
     font-size: 16px;
     line-height: 2;
     color: #333;
+}
+
+table {
+    border-collapse: collapse;
+    width: 20%;
+    margin: 1rem;
+    border: 1px solid #ddd;
 }
 
 input {
@@ -37,23 +46,14 @@ select {
     height: 22px;
 }
 
-.container {
-    margin: 50px auto;
-    width: 20%;
-    border-radius: 3px;
-    border: 1px solid #ddd;
-    position: relative;
-    right: 200px;
-}
-
-.title {
+.title,
+.title-extrato {
     background-color: #ddd;
     font-size: 24px;
     color: #333;
     text-align: center;
-    margin-bottom: 16px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     font-weight: bold;
     border-bottom: 1px solid #ccc;
     padding-bottom: 8px;
@@ -79,15 +79,14 @@ select {
 }
 
 .extrato {
-    width: 20%;
+    max-width: 20%;
     border-radius: 3px;
-    position: relative;
-    left: 200px;
-    bottom: 419px;
     border: 1px solid #ddd;
 }
 
-.title-extrato {
+.extrato th .container th {
+    width: 120px;
+    height: 40px;
     background-color: #ddd;
     font-size: 24px;
     color: #333;
@@ -95,7 +94,6 @@ select {
     margin-bottom: 16px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: bold;
     border-bottom: 1px solid #ccc;
     padding-bottom: 8px;
 }
@@ -114,4 +112,3 @@ select {
     margin-top: 5px;
     width: 100%;
 }
-
