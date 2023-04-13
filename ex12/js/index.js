@@ -117,11 +117,10 @@ const valorErro = document.getElementById('valor-erro');
 let valorMercado = 0;
 let valorTransporte = 0;
 let valorTotal = 0;
-let mesesValor = new Object();
+let mesesValor = {};
 let mesesAnos = [];
 
 function adicionar() {
-    let c = 0;
     const novaLinha = extrato.insertRow(-1);
     const celulaCategoria = novaLinha.insertCell(0);
     const celulaData = novaLinha.insertCell(1);
@@ -150,7 +149,13 @@ function adicionar() {
     const dataFormatada = new Date(Date.parse(dataNova));
     dataFormatada.setDate(dataFormatada.getDate() + 1); 
     let dataFormatadaTratada = dataFormatada.toLocaleDateString('pt-BR');
+    let novaData = {
+      dia: dataFormatada.getDate(),
+      mes: dataFormatada.getMonth() + 1,
+      ano: dataFormatada.getFullYear()
+    }
 
+    mesesValor.push(novaData)
     celulaData.appendChild(document.createTextNode(dataFormatadaTratada));
 
     

@@ -2,16 +2,15 @@ window.onload = () => {
     let total = localStorage.getItem('total');
     let mesesAnosString = localStorage.getItem('mesesAnos');
     let mesesValorString = localStorage.getItem('mesesValor');
-    let mesesValor = JSON.parse(mesesValorString);
-    let mesesAnos = JSON.parse(mesesAnosString);
     let valorMercado = localStorage.getItem('valorMercado');
     let valorTransporte = localStorage.getItem('valorTransporte');
+
+    let mesesValor = JSON.parse(mesesValorString);
+    let mesesAnos = JSON.parse(mesesAnosString);
     let tabela = document.querySelector('.tabela-resultado');
     let c = 0;
     let chavesContidas = []
-
-    console.log(mesesValor)
-    console.log(mesesAnos)
+    
     let resultadoTotal = document.getElementById('resultado-total');
     let resultadoTotalValor = document.getElementById('resultado-total-valor');
 
@@ -90,6 +89,7 @@ window.onload = () => {
     localStorage.removeItem('mesesValor');
     localStorage.removeItem('valorMercado');
     localStorage.removeItem('valorTransporte');
+    localStorage.removeItem('mesesAnos');
 }
 
 
