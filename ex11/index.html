@@ -10,6 +10,9 @@
     <div>Digite algo para contar a quantidade de vogais: <input type="text" id="input"> <button onclick="contarVogais()">Contar</button></div>
     <div id="text"></div>
     <script>
+        const removerAcentos = (texto) => {
+            return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        }
         const input = document.getElementById("input");
         const text = document.getElementById("text");
         const vogais = ['a', 'e', 'i', 'o', 'u'];
@@ -17,7 +20,8 @@
         function contarVogais() {
             let c = 0;
             for(let i = 0; i <= input.value.length; i++) {
-                if(vogais.includes(input.value.toLowerCase().charAt(i))){
+                let letra = removerAcentos(input.value.charAt(i))
+                if(vogais.includes(letra.toLowerCase())){
                     ++c;
                 }
             }

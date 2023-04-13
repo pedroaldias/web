@@ -8,8 +8,6 @@ window.onload = () => {
     let mesesValor = JSON.parse(mesesValorString);
     let mesesAnos = JSON.parse(mesesAnosString);
     let tabela = document.querySelector('.tabela-resultado');
-    let c = 0;
-    let chavesContidas = []
     
     let resultadoTotal = document.getElementById('resultado-total');
     let resultadoTotalValor = document.getElementById('resultado-total-valor');
@@ -29,6 +27,9 @@ window.onload = () => {
     resultadoTransporte.innerHTML = `Total de gastos com transporte`
     resultadoTransporteValor.innerHTML = `R$` + parseFloat(valorTransporte).toFixed(2);
 
+
+    let c = 0;
+    let chavesContidas = [];
 
     for(chave in mesesValor){
         for (const mesAno of mesesAnos){
@@ -85,11 +86,7 @@ window.onload = () => {
             
         }
     }
-    localStorage.removeItem('total');
-    localStorage.removeItem('mesesValor');
-    localStorage.removeItem('valorMercado');
-    localStorage.removeItem('valorTransporte');
-    localStorage.removeItem('mesesAnos');
+    localStorage.clear();
 }
 
 
